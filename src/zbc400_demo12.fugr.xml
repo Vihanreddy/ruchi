@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>demo module</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZBC400_DEMO12TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZBC400_DEMO12</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZBC400_11_AUTH_CHECK</FUNCNAME>
+     <SHORT_TEXT>FLIGHTDEMO</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_CARRID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>S_CARR_ID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_ACTIVITY</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ACTIV_AUTH</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_AUTH</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>WRONG_ACTIVITY</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_CARRID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Airline code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_ACTIVITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Activity</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_AUTH</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WRONG_ACTIVITY</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
